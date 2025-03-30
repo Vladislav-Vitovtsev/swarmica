@@ -1,0 +1,17 @@
+@use "@/app/styles/variables.scss" as *;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $bg-primary;
+}
+
+.header {
+  background-color: $bg-secondary;
+}
+
+.content {
+  margin-top: 2rem;
+  flex: 1;
+}

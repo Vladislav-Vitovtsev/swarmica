@@ -1,0 +1,154 @@
+@use "@/app/styles/variables.scss" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: $bg-primary;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $border-color-dark;
+  }
+
+  &.viewed {
+    border-left: 3px solid $primary;
+    background-color: rgba($primary, 0.03);
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $text-primary;
+    line-height: 1.4;
+  }
+
+  .date {
+    color: $text-tertiary;
+    font-size: 0.875rem;
+  }
+
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &.draft {
+      background: $yellow-bg;
+      color: $yellow-text;
+    }
+
+    &.published {
+      background: $yellow-light;
+      color: $yellow-text;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $border-color;
+  }
+
+  .content {
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      display: block;
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: 0.75rem 0;
+      color: $text-secondary;
+      line-height: 1.6;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  hl {
+    background-color: $yellow-bg;
+    color: $yellow-text;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: $text-tertiary;
+}
+
+.author {
+  font-weight: 500;
+}
+
+.rank {
+  color: $text-tertiary;
+}
+
+.viewedBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+}
+
+.link {
+  color: $primary;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

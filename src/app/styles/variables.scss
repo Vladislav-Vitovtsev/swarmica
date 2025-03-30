@@ -1,0 +1,81 @@
+// Основные цвета
+$primary: #007bff;
+$primary-dark: #0056b3;
+
+// Дополнительные цвета
+$yellow-bg: #fef3c7;
+$yellow-text: #854d0e;
+$yellow-light: #fef9c3;
+$error: #dc2626;
+
+// Светлая тема
+$light-text-primary: #213547;
+$light-text-secondary: #4b5563;
+$light-text-tertiary: #6b7280;
+$light-bg-primary: #ffffff;
+$light-bg-secondary: #f3f4f6;
+$light-bg-tertiary: #e5e7eb;
+$light-border-color: #e5e7eb;
+$light-border-color-dark: #d1d5db;
+$light-hover-bg: #f0f0f0;
+$light-active-bg: #e9ecef;
+
+// Темная тема
+$dark-text-primary: rgba(255, 255, 255, 0.87);
+$dark-text-secondary: rgba(255, 255, 255, 0.75);
+$dark-text-tertiary: rgba(255, 255, 255, 0.6);
+$dark-bg-primary: #242424;
+$dark-bg-secondary: #1f2937;
+$dark-bg-tertiary: #374151;
+$dark-border-color: #374151;
+$dark-border-color-dark: #4b5563;
+$dark-hover-bg: rgba(255, 255, 255, 0.1);
+$dark-active-bg: rgba(255, 255, 255, 0.15);
+
+// Динамические переменные (меняются в зависимости от темы)
+:root {
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --text-tertiary: #{$light-text-tertiary};
+  --bg-primary: #{$light-bg-primary};
+  --bg-secondary: #{$light-bg-secondary};
+  --bg-tertiary: #{$light-bg-tertiary};
+  --border-color: #{$light-border-color};
+  --border-color-dark: #{$light-border-color-dark};
+  --hover-bg: #{$light-hover-bg};
+  --active-bg: #{$light-active-bg};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #{$dark-text-primary};
+    --text-secondary: #{$dark-text-secondary};
+    --text-tertiary: #{$dark-text-tertiary};
+    --bg-primary: #{$dark-bg-primary};
+    --bg-secondary: #{$dark-bg-secondary};
+    --bg-tertiary: #{$dark-bg-tertiary};
+    --border-color: #{$dark-border-color};
+    --border-color-dark: #{$dark-border-color-dark};
+    --hover-bg: #{$dark-hover-bg};
+    --active-bg: #{$dark-active-bg};
+  }
+}
+
+// Переменные для использования в SCSS
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-tertiary: var(--text-tertiary);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-tertiary: var(--bg-tertiary);
+$border-color: var(--border-color);
+$border-color-dark: var(--border-color-dark);
+$hover-bg: var(--hover-bg);
+$active-bg: var(--active-bg);
+
+// Миксин для темной темы
+@mixin dark-theme {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
