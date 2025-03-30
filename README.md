@@ -2,93 +2,95 @@
 
 Приложение для поиска и просмотра статей с использованием News API.
 
-## Технологии
+## 🚀 Технологии
 
-- React
+- React 18
 - TypeScript
 - Vite
-- React Query
-- Recoil
-- React Router
+- React Query для управления состоянием сервера
+- Recoil для управления состоянием клиента
+- React Router для маршрутизации
+- SASS для стилизации
+- i18next для интернационализации
+- Zod для валидации данных
 
-## Установка
+## 🛠️ Установка
 
 1. Клонируйте репозиторий
-2. Установите зависимости: `npm install`
+2. Установите зависимости:
+   ```bash
+   npm install
+   ```
 3. Создайте файл `.env` и добавьте API ключ:
    ```
-   VITE_NEWS_API_KEY=your_api_key_here
+   VITE_API_URL=XXX
    ```
-4. Запустите приложение: `npm run dev`
+4. Запустите приложение:
+   ```bash
+   npm run dev
+   ```
 
-## Структура проекта
+## 📁 Структура проекта
 
 Проект использует архитектуру Feature Sliced Design:
 
-- `app` - инициализация приложения
-- `pages` - страницы
+- `app` - инициализация приложения, провайдеры, роутинг
+- `pages` - страницы приложения
 - `widgets` - композиционные компоненты
 - `features` - функциональные модули
 - `entities` - бизнес-сущности
 - `shared` - переиспользуемый код
 
-## Функционал
+## ✨ Функционал
 
-- Поиск статей по ключевым словам
-- Просмотр истории прочитанных статей
-- Адаптивный дизайн
+- 🔍 Поиск статей по ключевым словам
+- 📚 Просмотр истории прочитанных статей
+- 🌐 Поддержка светлой и темной темы
+- 🌍 Интернационализация (RU/EN)
+- 📱 Адаптивный дизайн
+- 🔄 Кэширование запросов
+- 📊 Фильтрация по категориям и статусам
 
-# React + TypeScript + Vite
+## 🧪 Разработка
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```bash
+# Запуск в режиме разработки
+npm run dev
 
-Currently, two official plugins are available:
+# Сборка проекта
+npm run build
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Линтинг
+npm run lint
+npm run lint:fix
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+# Форматирование кода
+npm run format
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📝 Скрипты
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+- `dev` - запуск в режиме разработки
+- `build` - сборка проекта
+- `lint` - проверка кода линтером
+- `lint:fix` - автоматическое исправление ошибок линтера
+- `format` - форматирование кода
+- `preview` - предпросмотр собранного проекта
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+## 🔒 Безопасность
+
+- Валидация данных через Zod
+- Безопасное хранение API ключей
+- Защита от XSS через React
+- Типизация через TypeScript
+
+## 📦 Зависимости
+
+Основные зависимости:
+
+- `@tanstack/react-query` - управление серверным состоянием
+- `recoil` - управление клиентским состоянием
+- `react-router-dom` - маршрутизация
+- `i18next` - интернационализация
+- `zod` - валидация данных
+- `sass` - стилизация
